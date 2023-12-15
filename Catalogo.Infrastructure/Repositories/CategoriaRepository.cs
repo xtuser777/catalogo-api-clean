@@ -12,8 +12,8 @@ namespace Catalogo.Infrastructure.Repositories;
 
 public class CategoriaRepository : ICategoriaRepository
 {
-    private CatalogoContext _categoryContext;
-    public CategoriaRepository(CatalogoContext context)
+    private CatalogoDbContext _categoryContext;
+    public CategoriaRepository(CatalogoDbContext context)
     {
         _categoryContext = context;
     }

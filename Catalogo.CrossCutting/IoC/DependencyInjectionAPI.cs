@@ -20,9 +20,9 @@ public static class DependencyInjectionAPI
     public static IServiceCollection AddInfrastructureAPI(this IServiceCollection services,
         IConfiguration configuration)
     {
-        services.AddDbContext<CatalogoContext>(options =>
+        services.AddDbContext<CatalogoDbContext>(options =>
            options.UseMySql(configuration.GetConnectionString("DefaultConnection"),
-                 new MySqlServerVersion(new Version(8, 0, 11))));
+                 new MySqlServerVersion(new Version(8, 0, 35))));
 
         services.AddScoped<ICategoriaRepository, CategoriaRepository>();
         services.AddScoped<IProdutoRepository, ProdutoRepository>();

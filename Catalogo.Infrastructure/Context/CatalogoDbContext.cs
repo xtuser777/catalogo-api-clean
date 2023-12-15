@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Catalogo.Infrastructure.Context;
 
-public class CatalogoContext : DbContext
+public class CatalogoDbContext : DbContext
 {
-    public CatalogoContext(DbContextOptions<CatalogoContext> options)
+    public CatalogoDbContext(DbContextOptions<CatalogoDbContext> options)
         : base(options)
     { }
 
@@ -21,7 +21,7 @@ public class CatalogoContext : DbContext
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        builder.ApplyConfigurationsFromAssembly(typeof(CatalogoContext)
+        builder.ApplyConfigurationsFromAssembly(typeof(CatalogoDbContext)
             .Assembly);
     }
 }

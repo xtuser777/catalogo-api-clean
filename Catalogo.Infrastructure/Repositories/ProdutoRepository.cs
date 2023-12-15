@@ -12,8 +12,8 @@ namespace Catalogo.Infrastructure.Repositories;
 
 public class ProdutoRepository : IProdutoRepository
 {
-    private CatalogoContext _productContext;
-    public ProdutoRepository(CatalogoContext context)
+    private CatalogoDbContext _productContext;
+    public ProdutoRepository(CatalogoDbContext context)
     {
         _productContext = context;
     }
